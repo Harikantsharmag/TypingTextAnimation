@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+/* #102154
+#e64019 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-border;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", san-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #102154;
+}
+
+.container {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  top: 0;
+  animation: slide 15s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -26.25rem;
+  }
+}
+
+.static-text {
+  font-size: 6.4rem;
+  color: #fff;
+}
+
+.dynamic-text {
+  font-size: 6.4rem;
+  color: #fff;
+  height: 8.5rem;
+  margin-left: 1.5rem;
+  color: #e64a19;
+  font-weight: 600;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-left: 0.1rem solid #e64a19;
+  left: 0;
+  background-color: #102154;
+  animation: typing 5s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 3rem);
+  }
+  100% {
+    left: 0;
+  }
+}
